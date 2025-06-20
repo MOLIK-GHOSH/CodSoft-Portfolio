@@ -115,7 +115,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 6px;
-  background-image: linear-gradient(rgba(0,0,0,0.5)),url("../images/download.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5)),url("download.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
