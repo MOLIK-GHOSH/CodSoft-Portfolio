@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utils.css" />
+    <link rel="stylesheet" href="about.css" />
+
+    <title>About</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="nav-left">
+        <span><a href="index.html">CodSoft</a></span>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Skills</a></li>
+          <li><a href="project_section.html">Projects</a></li>
+          <li><a href="Resume.pdf" download>Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <form action="/search.html" method="get">
+          <input
+            class="form-input"
+            type="text"
+            name="query"
+            placeholder="Seach here"
+          />
+          <button class="btn">
+            <img src="search50.svg" style="width: 15px; height: 15px" />
+          </button>
+        </form>
+      </div>
+
+      <!-- Hamburger icon -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </nav>
+
+    <hr />
+    <section class="about">
+      <div class="main">
+        <img src="MY-image.png" />
+        <div class="about-text">
+          <h1>About Us</h1>
+          <p>
+            I'm a passionate web developer with a strong interest in building
+            responsive, user-friendly websites and web applications. I
+            specialize in front-end development using HTML, CSS, JavaScript, and
+            have experience with modern frameworks. I enjoy learning new
+            technologies and creating clean, functional designs that deliver a
+            great user experience.
+
+            <br />✔ Skills: HTML, CSS, JavaScript, Git, Responsive Design.
+            <br />✔ Goal: To become a full-stack developer and build real-world
+            projects. <br />✔ Passion: Coding, UI/UX, and problem solving.
+          </p>
+          <button type="button">let's talk</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

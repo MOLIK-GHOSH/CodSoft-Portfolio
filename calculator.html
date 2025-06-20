@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <title>Calculator</title>
+    <style>
+      body {
+        background: #e3e3e3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial;
+      }
+      .calculator {
+        background: #222;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+      .display {
+        width: 100%;
+        height: 60px;
+        font-size: 24px;
+        text-align: right;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 10px;
+        background: #444;
+        color: white;
+        margin-left: -10px;
+      }
+      .buttons {
+        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 60px);
+        gap: 10px;
+      }
+      button {
+        height: 60px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        background: #666;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #888;
+      }
+      .equal {
+        background: #f57c00;
+      }
+      .equal:hover {
+        background: #fb8c00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" class="display" id="result" readonly />
+      <div class="buttons">
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('/')">/</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('*')">*</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('-')">-</button>
+
+        <button onclick="append('0')">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="eraseLast()">⌫</button>
+        <button onclick="append('+')">+</button>
+
+        <button class="equal" style="grid-column: span 4" onclick="calculate()">
+          =
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function append(value) {
+        document.getElementById("result").value += value;
+      }
+
+      function eraseLast() {
+        const display = document.getElementById("result");
+        display.value = display.value.slice(0, -1);
+      }
+
+      function calculate() {
+        try {
+          document.getElementById("result").value = eval(
+            document.getElementById("result").value
+          );
+        } catch {
+          document.getElementById("result").value = "Error";
+        }
+      }
+
+      //adding event listner
+      document.addEventListener("keydown", function (event) {
+        const key = event.key;
+        const allowedKeys = "0123456789+-*/.=EnterBackspace";
+        const display = document.getElementById("result");
+
+        if (allowedKeys.includes(key)) {
+          if (key === "Enter" || key === "=") {
+            calculate();
+          } else if (key === "Backspace") {
+            eraseLast();
+          } else {
+            append(key);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

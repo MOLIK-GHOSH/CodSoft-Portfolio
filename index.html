@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utils.css" />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="nav-left">
+        <span><a href="index.html">CodSoft</a></span>
+        <div class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Skills</a></li>
+            <li><a href="project_section.html">Projects</a></li>
+            <li><a href="Resume.pdf" download>Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+      </div>
+      <div class="nav-right">
+        <form action="/search.html" method="get">
+          <input
+            class="form-input"
+            type="text"
+            name="query"
+            placeholder="Seach here"
+          />
+          <button class="btn">
+            <img src="search50.svg" style="width: 15px; height: 15px" />
+          </button>
+        </form>
+      </div>
+    </nav>
+    <hr />
+
+    <div class="content max-width-1 m-auto m-2">
+      <div class="content-left">
+        <h2>Hello, I’m Molik Ghosh, a web developer.</h2>
+        <p>
+          I’ve been studying as a web developer for a few years now, and I’m
+          passionate about everything that goes into making websites work well
+          and look beautiful. The web is my passion because it’s where I can
+          find the most exciting projects to work on. It’s also where I get to
+          express my creativity in ways that are hard to find elsewhere. I love
+          working with clients who want something more than just another
+          website; they want their site to be more than just another website.
+          They want it to be memorable, engaging, and valuable—and that’s where
+          I come in!
+        </p>
+      </div>
+      <div class="content-right">
+        <img src="animated.jpg" alt="image" />
+      </div>
+    </div>
+    <hr />
+
+    <div class="home-articles m-auto max-width-1 m-2">
+      <div class="home-article">
+        <div class="home-article-img">
+          <img src="html5.png" />
+        </div>
+        <div class="home-article-content">
+          <a href="/blogpost.html"><h3>HTML</h3></a>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="home-article">
+        <div class="home-article-img">
+          <img src="css.jpg" />
+        </div>
+        <div class="home-article-content">
+          <a href="/blogpost.html"><h3>CSS</h3></a>
+          <span></span>
+        </div>
+      </div>
+      <div class="home-article">
+        <div class="home-article-img">
+          <img src="js.jpg  " />
+        </div>
+        <div class="home-article-content">
+          <a href="/blogpost.html"><h3>JavaScript</h3></a>
+        </div>
+      </div>
+      <div class="home-article">
+        <div class="home-article-img">
+          <img src="python.jpg" />
+        </div>
+        <div class="home-article-content">
+          <a href="/blogpost.html"><h3>Python</h3></a>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="footer max-width-2 m-auto">
+      <p>
+        © 2025 Codsoft All rights reserved
+        <a href="/molik.html" style="text-decoration: none">Term & Condition</a>
+      </p>
+    </div>
+    <hr />
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

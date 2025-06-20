@@ -1,0 +1,192 @@
+body{
+    background-color:#000000;
+    color:white;
+}
+.container{
+    width:70%;
+    margin:50px auto;
+}
+.contact-box{
+    background:#fff;
+    display:flex;
+}
+.contact-left{
+    flex-basis: 60%;
+    padding:40px 60px;
+    width:400px;
+    color:black;
+}
+.contact-left h3{
+    margin-bottom:10px;
+    font-weight:bolder;
+    font-size:20px;
+}
+.contact-right{
+    flex-basis: 30%;
+    padding:20px;
+    background-color:rgb(68, 68, 255);
+    color:white;
+}
+h1{
+    margin-bottom:10px;
+}
+.container p{
+    margin-bottom:40px;
+}
+label{
+    color:#181717;
+}
+.input-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:5px;
+    flex-direction:column;
+    font-size:18px;
+  
+}
+.input-row .input-group{
+    flex-basis: 45%;
+}
+.input-group input{
+    width:100%;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    outline:none;
+    padding:10px;
+    margin-bottom:10px;
+}
+.btn2{
+    cursor: pointer;
+}
+.btn2:hover{
+    color: white;
+}
+textarea{
+    width:100%;
+    border:1px solid #ccc;
+    outline:none;
+    padding:30px;
+    box-sizing:border-box;
+}
+.contact-box button{
+    background:black;
+    width:100px;
+    border:none;outline:none;
+    color:aqua;
+    height:30px;
+    border-radius:20px;
+    margin-top:10px;
+    box-shadow:0px 5px 15px 0px rgba(0, 0, 0, 0.575);
+}
+.contact-right h3{
+    font-weight:bolder;
+    margin-bottom: 30px;
+}
+tr td:first-child{
+    padding-right:20px;
+}
+tr td{
+    padding-top:20px;
+}
+
+/* Hide checkbox */
+.hamburger {
+  display: none;
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Show hamburger below 1024px */
+@media screen and (max-width: 1024px) {
+  .hamburger-icon {
+    display: block;
+  }
+
+  .navigation ul,
+  .nav-right {
+    display: none;
+  }
+
+  #hamburger-toggle:checked ~ .navigation ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    right: 0;
+    z-index: 999;
+    text-align: center;
+  }
+
+  .navigation ul li {
+    padding: 15px 0;
+  }
+
+  .nav-left {
+    width: 100%;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .contact-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .contact-left, .contact-right {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .input-row .input-group {
+    flex-basis: 100%;
+  }
+
+  .nav-left ul {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #111;
+    display: none; /* Hidden by default for hamburger */
+  }
+
+  .nav-left span {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    margin-top: 10px;
+  }
+
+  input.form-input {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
